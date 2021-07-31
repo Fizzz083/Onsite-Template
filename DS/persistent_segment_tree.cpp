@@ -3,10 +3,7 @@ int root[mxn], leftchild[25*mxn], rightchild[25*mxn], value[25*mxn], a[mxn];
 int now = 0, n;
 int build(int L, int R){
 	int node = ++now;
-	
-	if(L == R){
-		return node;
-	}
+	if(L == R)return node;
 	int mid = (L+R)>>1;
 	leftchild[node] = build(L, mid);
 	rightchild[node] = build(mid+1, R);
